@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    width: 100vw;
+}
+
+.section {
+    min-width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+}
+
+.customScrollbar {
+    height: 3px;
+    width: 100vw;
+    background-color: black;
+    position: fixed;
+    z-index: 2;
+}
+
+.scrollBuffer {
+    height: 100%;
+    background-color: white;
+}

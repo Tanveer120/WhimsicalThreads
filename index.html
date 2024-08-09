@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scrolling with Lenis and GSAP</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="customScrollbar">
+        <div class="scrollBuffer"></div>
+    </div>
+    <div class="scroll-container">
+        <div class="content">
+            <div class="section" style="background: linear-gradient(to right,#ff0,#f00);">Section 1</div>
+            <div class="section" style="background: linear-gradient(to right,#f00,#0f0);">Section 2</div>
+            <div class="section" style="background: linear-gradient(to right,#0f0,#00f);">Section 3</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@latest/dist/lenis.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+
+    <script type="module" src="index.js"></script>
+</body>
+
+</html>
