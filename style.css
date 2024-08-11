@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body,
@@ -29,7 +28,7 @@ body::-webkit-scrollbar {
 
 .content {
     display: flex;
-
+    
     width: 100vw;
 }
 
@@ -38,6 +37,7 @@ body::-webkit-scrollbar {
     /* max-width: 98vw; */
     height: 100vh;
     flex-shrink: 0;
+    /* border: 20px solid black; */
 }
 
 .customScrollbar {

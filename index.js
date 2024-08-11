@@ -6,7 +6,7 @@ let scrollBuffer = document.querySelector(".scrollBuffer");
 
 // Initialize Lenis for smooth scrolling
 const lenis = new Lenis({
-    duration: 0.8, // Duration of the smooth scroll
+    duration: 1, // Duration of the smooth scroll
     easing: (t) => t, // Easing function
     smooth: true, // Enable smooth scrolling
 });
@@ -25,7 +25,7 @@ gsap.to(".content", {
     scrollTrigger: {
         trigger: ".scroll-container",
         pin: true,
-        scrub: 1,
+        scrub: 2,
         end: () => "+=" + document.querySelector(".content").offsetWidth,
 
         onUpdate: (self) => {
