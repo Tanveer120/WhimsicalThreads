@@ -11,12 +11,14 @@ const lenis = new Lenis({
     smooth: true, // Enable smooth scrolling
 });
 
+
 // Update Lenis on each animation frame
 function raf(time) {
     lenis.raf(time);
     requestAnimationFrame(raf);
 }
 requestAnimationFrame(raf);
+
 
 // GSAP horizontal scroll animation
 gsap.to(".content", {
@@ -41,11 +43,7 @@ gsap.to(".content", {
 });
 
 
-
-
-
-
-
+//Cursor Trail
 window.addEventListener('mousemove', function (e) {
     //trail
     [.7, .9, .8, .5, .25, .6, .4, .3, .2].forEach(function (i) {
@@ -57,32 +55,36 @@ window.addEventListener('mousemove', function (e) {
         var precision = 50; // 2 decimals
         var randomnum = Math.floor(Math.random() * (10 * precision - 1 * precision) + 1 * precision) / (1 * precision);
         var rOpacity = randomnum / 10;
-        // var rSize = randomnum / 120;
         var rSize = randomnum / 300;
 
         elem.style.position = 'fixed';
         elem.classList.add('star-five')
         elem.style.zIndex = 6;
         elem.style.transform = `rotate(35deg) scale(${rSize})`
-        //elem.style.transform = `rotate(35deg) scale(${rSize}) translate(-1450px, -250px)`
         elem.style.top = e.pageY - window.scrollY + Math.round(Math.random() * j - j / 2) - 100 + 'px';
         elem.style.left = e.pageX + Math.round(Math.random() * j - j / 2) - 100 + 'px';
-        //elem.style.width = size;
-        //console.log(rSize);
         elem.style.opacity = rOpacity;
-        //elem.style.height = size;
-        // elem.style.background = 'hsla(' +
-        //   Math.round(Math.random() * 160) + ', ' +
-        //   '60%, ' +
-        //   '100%, ' +
-        //   i + ')';
-        //elem.style.borderRadius = size;
         elem.style.pointerEvents = 'none';
         document.body.appendChild(elem);
         window.setTimeout(function () {
             document.body.removeChild(elem);
         }, Math.round(Math.random() * i * 1000));
     });
-    ////
-
 }, false);
+
+
+//Logo Sizing on Scroll
+let logoImg = document.querySelector(".logoImg");
+
+$(window).scroll(function () {
+    const x = this.scrollY
+    if (x > 100 && x < 600) {
+        logoImg.style.height = `${x / 3000}vh`;
+    }
+    if (x > 600) {
+        logoImg.style.height = `${x / 3000}vh`;
+    }
+    if (x < 100) {
+        logoImg.style.height = '100vh';
+    }
+})

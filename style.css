@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: rgb(0, 136, 255);
+    font-family: "poppins";
+    font-size: 1rem;
 }
 
 body,
@@ -17,6 +20,38 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.vDiv {
+    height: 100vh;
+    width: 100vw;
+    background-color: #090302;
+    /* display: flex; */
+}
+
+.vDiv h1 {
+    font-size: 4rem;
+}
+
+.logoImg {
+    /* height: 70vh;
+    /* /* position: absolute sticky; */
+    /* position: sticky; */
+    /* position: absolute; */
+    min-height: 20vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* left: -100px; */
+    /* position: absolute fixed; */
+    z-index: 3;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    transition-duration: 1000ms;
+    /* Optional: Prevent interaction with the image */
+}
+
 .scroll-container {
     display: flex;
     width: 100vw;
@@ -28,7 +63,7 @@ body::-webkit-scrollbar {
 
 .content {
     display: flex;
-    
+
     width: 100vw;
 }
 
@@ -37,8 +72,19 @@ body::-webkit-scrollbar {
     /* max-width: 98vw; */
     height: 100vh;
     flex-shrink: 0;
+    /* background-color: #1F2421; */
+    background-color: #090302;
     /* border: 20px solid black; */
 }
+
+.section1 {
+    /* display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; */
+}
+
+
 
 .customScrollbar {
     height: 3px;
@@ -52,11 +98,6 @@ body::-webkit-scrollbar {
     height: 100%;
     background-color: white;
 }
-
-
-
-
-
 
 .star-five {
     background: transparent;
