@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: rgb(0, 136, 255);
+    /* color: rgb(0, 136, 255); */
     font-family: "poppins";
     font-size: 1rem;
 }
@@ -23,8 +23,19 @@ body::-webkit-scrollbar {
 .vDiv {
     height: 100vh;
     width: 100vw;
+    /* background-color: green; */
+    display: flex;
+    position: fixed;
+    z-index: 3;
+    align-items: flex-start;
+
+}
+
+.outerVDiv {
+    height: 100vh;
+    width: 100vw;
     background-color: #090302;
-    /* display: flex; */
+    display: flex;
 }
 
 .vDiv h1 {
@@ -32,24 +43,17 @@ body::-webkit-scrollbar {
 }
 
 .logoImg {
-    /* height: 70vh;
-    /* /* position: absolute sticky; */
-    /* position: sticky; */
-    /* position: absolute; */
     min-height: 20vh;
-    position: fixed;
     left: 0;
     top: 0;
-    /* left: -100px; */
-    /* position: absolute fixed; */
     z-index: 3;
     bottom: 0;
     right: 0;
     height: 100vh;
     overflow: hidden;
     pointer-events: none;
-    transition-duration: 1000ms;
-    /* Optional: Prevent interaction with the image */
+    transition-duration: 2000ms;
+    /* border: 1px solid rebeccapurple; */
 }
 
 .scroll-container {
@@ -142,4 +146,27 @@ body::-webkit-scrollbar {
     border-left: 100px solid transparent;
     transform: rotate(-70deg);
     content: '';
+}
+
+
+
+
+@keyframes flyInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.nameHeader {
+    position: absolute;
+    height: 100px;
+    width: 300px;
+    color: #ffffff;
+    animation: flyInFromTop 1s ease-out;
 }

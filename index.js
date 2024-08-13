@@ -75,16 +75,25 @@ window.addEventListener('mousemove', function (e) {
 
 //Logo Sizing on Scroll
 let logoImg = document.querySelector(".logoImg");
+let signUpButton = document.querySelector(".signUpButton");
+// let imgHeight = 100;
 
 $(window).scroll(function () {
     const x = this.scrollY
-    if (x > 100 && x < 600) {
-        logoImg.style.height = `${x / 3000}vh`;
+    if (x > 150 && x < 600) {
+        // logoImg.style.height = `${x / 3000}vh`;
+        logoImg.style.height = `20vh`;
+        // signUpButton.style.left = '200px';
     }
-    if (x > 600) {
-        logoImg.style.height = `${x / 3000}vh`;
-    }
-    if (x < 100) {
+    // if (x > 600) {
+    //     logoImg.style.height = `${x / 3000}vh`;
+    //     // signUpButton.style.left = `${x / 10}px`;
+    //     signUpButton.style.left = '100px';
+    //     imgHeight = 20;
+    // }
+    if (x < 150) {
         logoImg.style.height = '100vh';
+        // imgHeight = 100;
     }
 })
+

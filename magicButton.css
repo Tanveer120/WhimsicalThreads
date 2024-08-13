@@ -1,4 +1,13 @@
-/* From Uiverse.io by VashonG */
+.signUpButton {
+    z-index: 3;
+    padding: 1rem;
+    /* transition: 3000ms; */
+}
+
+.signUpButton:hover {
+    scale: 1.05;
+}
+
 .relative {
     position: relative;
 }
@@ -40,9 +49,8 @@ button {
     color: inherit;
     margin: 0;
     padding: 0;
-    width: 250px !important;
+    width: 200px !important;
     border: none;
-    left: -100px;
 }
 
 button {
